@@ -23,7 +23,7 @@ def search_jobs(
     job_title: str,
     location: str,
     experience: str
-) -> str:
+) -> list:
     """
     Search jobs matching title,
     location and experience.
@@ -96,4 +96,26 @@ def calculate_fit_score(
     return {
         "score": score,
         "matched_skills": matched_skills
-    }    
+    }
+
+@tool
+def analyze_skill_gap(
+    resume_text: str,
+    job_skills: list
+) -> dict:
+    """
+    Identify missing skills between resume and job.
+    """
+
+    resume_text = resume_text.lower()
+
+    missing_skills = []
+
+    for skill in job_skills:
+
+        if skill.lower() not in resume_text:
+            missing_skills.append(skill)
+
+    return {
+        "missing_skills": missing_skills
+    }       

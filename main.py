@@ -6,7 +6,7 @@ from app.graph import graph
 initial_state = {
     "messages": [
         HumanMessage(
-            content="Calculate fit score"
+            content="match my resume with genai jobs"
         )
     ],
 
@@ -33,9 +33,27 @@ LangChain
         }
     ],
 
-    "fit_scores": [],
+   "fit_scores": [
+    {
+        "job_title": "GenAI Engineer",
+        "score": 50,
+        "matched_skills": [
+            "Python",
+            "LangChain"
+        ]
+    }
+],
+    
+    "skill_gaps": [
+    {
+        "job_title": "GenAI Engineer",
+        "missing_skills": [
+            "LangGraph",
+            "RAG"
+        ]
+    }
+],
 
-    "skill_gaps": [],
 
     "next_step": None
 }
