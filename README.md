@@ -133,6 +133,13 @@ python main.py
 
 ---
 
+## Live Demo
+
+https://career-copilot-82ro.onrender.com
+
+API Docs:
+https://career-copilot-82ro.onrender.com/docs
+
 ## Author
 
 Pawanjot Kaur
